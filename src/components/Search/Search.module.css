@@ -1,65 +1,39 @@
-.wrapper {
-  display: flex;
-  align-items: center;
-  background-color: var(--color-black);
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  padding: 5px 10px;
-  width: 300px;
-  position: relative;
+.search {
+  padding: 14px 20px;
+  height: 100%;
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid var(--color-black);
+  width: 502px;
 }
 
-.search {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 14px;
-  padding: 8px;
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  height: 48px;
 }
 
 .searchButton {
-  background: none;
-  border: none;
+  border-radius: 0px 8px 8px 0px;
+  padding: 14px 20px;
+  height: 100%;
+  border: 1px solid var(--color-black);
+  border-left: none;
   cursor: pointer;
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-}
-
-.listBox {
-  width: 100%;
-  position: absolute;
-  top: 60px;
-  background: var(--color-black);
-  border: 1px solid var(--color-primary);
-  border-radius: 0 0 10px 10px;
-  max-height: 500px;
-  overflow-y: auto;
-  z-index: 10;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  height: 100%;
 }
 
 .listElement {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.listElement:hover {
-  background-color: #1f1f1f;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .albumTitle {
-  font-size: 14px;
-  color: white;
-  margin: 0;
+  font-size: 16px;
 }
 
 .albumArtists {
   font-size: 12px;
-  color: gray;
-  margin: 0;
 }
