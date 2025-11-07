@@ -1,9 +1,11 @@
+/* Navbar.module.css */
 .navbar {
   background-color: var(--color-primary);
   height: 74px;
   width: 100vw;
-  padding: 0px 32px;
+  /* Test 2: Padding ensures space to the logo's left */
+  padding: 0px 32px; 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Test 2: Vertically centers all children */
+  justify-content: space-between; /* Test 1: Separates Logo, Search, and Button */
 }
