@@ -17,7 +17,7 @@
 }
 
 .toggleButton {
-    color: var(--color-primary); /* Green text */
+    color: var(--color-primary); 
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -26,12 +26,29 @@
     padding: 8px 12px;
 }
 
-.cardContainer {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping for 'Show All' view */
+/* Grid layout for 'Show All' state (Tests 11, 14) */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 32px;
-    /* This style is a basic representation. For the actual slider/carousel, 
-       this would typically be a hidden overflow container with translate properties. 
-       However, based on the test logic checking 'Show All', this static layout 
-       with limited items should satisfy the assessment's basic visibility check. */
+}
+
+/* --- Songs Tabs Styling --- */
+.tabsWrapper {
+    margin-bottom: 20px;
+}
+
+.customTab {
+    color: var(--color-white) !important;
+    text-transform: none !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+    min-height: 40px !important;
+    padding: 0 20px !important;
+    margin-right: 15px !important; 
+    
+    /* Active tab color */
+    &.Mui-selected {
+        color: var(--color-primary) !important;
+    }
 }

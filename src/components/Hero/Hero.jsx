@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.css";
+// Ensure the image path is correct in your project
+import HeadphonesImage from "../../assets/hero_headphones.png"; 
 
 function Hero() {
   return (
@@ -10,7 +12,7 @@ function Hero() {
       </div>
       <div>
         <img
-          src={require("../../assets/hero_headphones.png")}
+          src={HeadphonesImage}
           width={212}
           alt="headphones"
         />

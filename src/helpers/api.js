@@ -31,3 +31,11 @@ export const fetchSongs = async () => {
   const url = `${BACKEND_ENDPOINT}/songs`;
   return fetchAndParse(url);
 };
+// helpers/api.js (Add this function)
+
+// ... existing code ...
+
+export const fetchGenres = async () => {
+  const url = `${BACKEND_ENDPOINT}/genres`;
+  return fetchAndParse(url);
+};

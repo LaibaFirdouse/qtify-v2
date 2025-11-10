@@ -1,15 +1,19 @@
 /* App.css */
-/* Import Poppins font for use in the Button component (Test Case 8) */
+
+/* 1. Import Poppins font for use in the Button component (Test Case 8) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* Define CSS Variables for Colors (Test Cases 4, 5, 10) */
+/* 2. Define CSS Variables for Colors (Tests 4, 5, 10) */
 :root {
-  --color-primary: #34C94B; /* Green color for Navbar background and Button text */
-  --color-black: #121212; /* Black color for Button background and Hero background */
-  --color-secondary: #FFFFFF;
+  /* Green color for Navbar background and Button text */
+  --color-primary: #34C94B; 
+  /* Black color for Button background, Hero background, and general app background */
+  --color-black: #121212; 
+  /* White color, used for text and card banners */
+  --color-white: #FFFFFF;
 }
 
-/* Base styles */
+/* 3. Global Reset and Base Styles */
 * {
   box-sizing: border-box;
 }
@@ -19,7 +23,51 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-black);
-  color: var(--color-secondary);
+  /* Set the main background color to black (matching the Hero section) */
+  background-color: var(--color-black); 
+  /* Set default text color to white */
+  color: var(--color-white);
 }
-/* ... rest of your App.css content ... */
+
+.App {
+  /* No need for text-align: center; as it interferes with component alignment */
+  /* Remove any unnecessary styles from the Create React App boilerplate */
+  min-height: 100vh;
+}
+
+/* --- You can safely remove the following boilerplate styles if not used --- */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

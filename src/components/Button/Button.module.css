@@ -1,13 +1,13 @@
 /* Button.module.css */
 .button {
-  background-color: var(--color-black); /* Test 4: Black background */
-  color: var(--color-primary); /* Test 5: Green text color */
+  background-color: var(--color-black); /* Black background (Test 4) */
+  color: var(--color-primary); /* Green text color (Test 5) */
   padding: 10px 16px;
   border: none;
-  border-radius: 12px; /* Test 6: Border radius */
-  font-family: 'Poppins', sans-serif; /* Test 8: Poppins font */
+  border-radius: 12px; /* Border radius (Test 6) */
+  font-family: 'Poppins', sans-serif; /* Poppins font (Test 8) */
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
-  cursor: pointer; /* Test 7: Cursor pointer on hover */
+  cursor: pointer; /* Pointer cursor (Test 7) */
 }

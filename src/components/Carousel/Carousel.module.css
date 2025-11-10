@@ -1,0 +1,49 @@
+/* Carousel.module.css */
+.carouselContainer {
+    position: relative;
+    padding: 20px 0;
+}
+
+.swiperWrapper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+.swiperSlide {
+    width: 150px !important; 
+    height: auto;
+}
+
+/* Custom Navigation Styling */
+.navigation {
+    position: absolute;
+    /* Adjusted top position to center it vertically relative to the 150px card height */
+    top: calc(150px / 2); 
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background-color: var(--color-primary); /* Green background */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensure the icon is visible by raising its container z-index */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+}
+
+.leftNav {
+    left: 2px; /* Position close to the edge */
+}
+
+.rightNav {
+    right: 2px; /* Position close to the edge */
+}
+
+/* Ensure disabled button styling if necessary */
+.swiperButtonDisabled {
+    opacity: 0.5;
+    cursor: default;
+}
