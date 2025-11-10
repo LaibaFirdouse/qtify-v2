@@ -1,7 +1,8 @@
 // helpers/api.js
-// Removed: import axios from "axios";
 
-export const BACKEND_ENDPOINT = "https://qtify-backend-labs.crio.do";
+// 💡 FIX: Set BACKEND_ENDPOINT to an empty string. 
+// The browser will now treat requests starting with '/' as relative to the base URL (which the proxy maps to the backend).
+export const BACKEND_ENDPOINT = "";
 
 // Helper function to handle the fetch request and JSON parsing
 const fetchAndParse = async (url) => {
@@ -12,30 +13,32 @@ const fetchAndParse = async (url) => {
     }
     return await response.json();
   } catch (e) {
+    // 💡 Logging the URL helps debug if the proxy failed
     console.error(`Error fetching data from ${url}:`, e);
     return [];
   }
 };
 
 export const fetchTopAlbums = async () => {
-  const url = `${BACKEND_ENDPOINT}/albums/top`;
+  // 💡 FIX: Use only the relative path
+  const url = `/albums/top`;
   return fetchAndParse(url);
 };
 
 export const fetchNewAlbums = async () => {
-  const url = `${BACKEND_ENDPOINT}/albums/new`;
+  // 💡 FIX: Use only the relative path
+  const url = `/albums/new`;
   return fetchAndParse(url);
 };
 
 export const fetchSongs = async () => {
-  const url = `${BACKEND_ENDPOINT}/songs`;
+  // 💡 FIX: Use only the relative path
+  const url = `/songs`;
   return fetchAndParse(url);
 };
-// helpers/api.js (Add this function)
-
-// ... existing code ...
 
 export const fetchGenres = async () => {
-  const url = `${BACKEND_ENDPOINT}/genres`;
+  // 💡 FIX: Use only the relative path
+  const url = `/genres`;
   return fetchAndParse(url);
 };

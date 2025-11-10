@@ -2,6 +2,7 @@
   "name": "qtify",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://qtify-backend.labs.crio.do",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
