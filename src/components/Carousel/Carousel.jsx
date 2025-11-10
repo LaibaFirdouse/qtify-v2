@@ -1,11 +1,11 @@
 // src/components/Carousel/Carousel.jsx
 
-import React from 'react';
+// import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Card from '../Card/Card';
+// import Card from '../Card/Card';
 import styles from './Carousel.module.css';
 
 // 💡 NEW: Import standard MUI icons instead of local SVGs
