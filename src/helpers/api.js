@@ -1,44 +1,44 @@
 // helpers/api.js
 
-// 💡 FIX: Set BACKEND_ENDPOINT to an empty string. 
-// The browser will now treat requests starting with '/' as relative to the base URL (which the proxy maps to the backend).
-export const BACKEND_ENDPOINT = "";
+// 💡 FIX: Use the full absolute URL for production/deployment.
+// The proxy works locally, but production code must be explicit.
+export const BACKEND_ENDPOINT = "https://qtify-backend.labs.crio.do";
 
 // Helper function to handle the fetch request and JSON parsing
-const fetchAndParse = async (url) => {
+const fetchAndParse = async (path) => {
+  // Construct the full URL using the absolute endpoint for deployment
+  const url = `${BACKEND_ENDPOINT}${path}`; 
+  
   try {
     const response = await fetch(url);
     if (!response.ok) {
+      // Log the full URL being used
+      console.error(`HTTP error! Status: ${response.status} for URL: ${url}`);
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     return await response.json();
   } catch (e) {
-    // 💡 Logging the URL helps debug if the proxy failed
     console.error(`Error fetching data from ${url}:`, e);
     return [];
   }
 };
 
 export const fetchTopAlbums = async () => {
-  // 💡 FIX: Use only the relative path
-  const url = `/albums/top`;
-  return fetchAndParse(url);
+  // Pass only the path segment
+  return fetchAndParse(`/albums/top`);
 };
 
 export const fetchNewAlbums = async () => {
-  // 💡 FIX: Use only the relative path
-  const url = `/albums/new`;
-  return fetchAndParse(url);
+  // Pass only the path segment
+  return fetchAndParse(`/albums/new`);
 };
 
 export const fetchSongs = async () => {
-  // 💡 FIX: Use only the relative path
-  const url = `/songs`;
-  return fetchAndParse(url);
+  // Pass only the path segment
+  return fetchAndParse(`/songs`);
 };
 
 export const fetchGenres = async () => {
-  // 💡 FIX: Use only the relative path
-  const url = `/genres`;
-  return fetchAndParse(url);
+  // Pass only the path segment
+  return fetchAndParse(`/genres`);
 };
